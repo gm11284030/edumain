@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.quartz.mapper.ITestEduDao">
+    
+    <resultMap type="com.ruoyi.quartz.domain.TestEdu" id="BaseResult">
+        <result column="reqInfo" jdbcType="VARCHAR" property="reqInfo"/>
+        <result column="resultInfo" jdbcType="VARCHAR" property="resultInfo"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.ruoyi.quartz.domain.TestEdu">
+        insert into edu_test(reqInfo,resultInfo) values(
+		#{reqInfo,jdbcType=VARCHAR},
+		#{resultInfo,jdbcType=VARCHAR}
+        )
+    </insert>
+    
+</mapper>
